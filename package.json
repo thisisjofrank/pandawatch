@@ -2,9 +2,12 @@
   "name": "pandawatch",
   "version": "1.0.0",
   "description": "notify me when there are pandas",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "devserver": "nodemon --inspect server.js",
+    "debug": "node --inspect server.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/thisisjofrank/pandawatch/issues"
   },
-  "homepage": "https://github.com/thisisjofrank/pandawatch#readme"
+  "homepage": "https://github.com/thisisjofrank/pandawatch#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ffmpeg": "0.0.4",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
 }
